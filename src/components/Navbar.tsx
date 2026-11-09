@@ -231,3 +231,4 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, soundEnabled, onTo
     </header>
   );
 };
+

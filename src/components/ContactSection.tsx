@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  Copy, 
-  Check, 
-  MessageSquare, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Copy,
+  Check,
+  MessageSquare,
   Sparkles,
   ExternalLink
 } from 'lucide-react';
@@ -71,7 +71,7 @@ export const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-24 relative bg-slate-950/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/30 text-xs font-mono text-cyan-400">
@@ -87,10 +87,10 @@ export const ContactSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left Column: Direct Info Cards */}
           <div className="lg:col-span-5 space-y-4">
-            
+
             {/* Availability Pill */}
             <div className="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-500/30 flex items-center gap-3">
               <span className="relative flex h-3 w-3">
@@ -199,7 +199,7 @@ export const ContactSection: React.FC = () => {
           {/* Right Column: Contact Message Form */}
           <div className="lg:col-span-7">
             <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 space-y-6">
-              
+
               <div className="border-b border-white/10 pb-4">
                 <h3 className="text-lg font-bold text-white flex items-center gap-2">
                   <MessageSquare className="w-5 h-5 text-cyan-400" />
@@ -244,11 +244,10 @@ export const ContactSection: React.FC = () => {
                             soundEffects.playClick();
                             setFormData({ ...formData, subject: subj });
                           }}
-                          className={`text-xs px-2.5 py-1 rounded-lg border font-mono transition-colors ${
-                            formData.subject === subj
+                          className={`text-xs px-2.5 py-1 rounded-lg border font-mono transition-colors ${formData.subject === subj
                               ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50'
                               : 'bg-slate-900 text-slate-400 border-white/5 hover:text-slate-200'
-                          }`}
+                            }`}
                         >
                           {subj}
                         </button>

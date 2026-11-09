@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  Bot, 
-  Send, 
-  CheckCircle2, 
-  AlertTriangle, 
-  RefreshCw, 
-  Terminal as TerminalIcon, 
-  DollarSign, 
-  ShieldCheck, 
-  Sparkles, 
-  Cpu, 
+import {
+  Bot,
+  Send,
+  CheckCircle2,
+  AlertTriangle,
+  RefreshCw,
+  Terminal as TerminalIcon,
+  DollarSign,
+  ShieldCheck,
+  Sparkles,
+  Cpu,
   ArrowRight,
   Code2,
   FileCheck,
@@ -335,7 +335,7 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
   return (
     <section id="playground" className="py-20 relative bg-slate-950/60 border-y border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-xs font-mono text-cyan-400">
@@ -358,11 +358,10 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
               soundEffects.playClick();
               setActiveTab('resume-matcher');
             }}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-              activeTab === 'resume-matcher'
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${activeTab === 'resume-matcher'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
                 : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-white/5'
-            }`}
+              }`}
           >
             <Bot className="w-4 h-4" />
             <span>1. AI Resume Matcher (Gemini)</span>
@@ -373,11 +372,10 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
               soundEffects.playClick();
               setActiveTab('restaurant-assistant');
             }}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-              activeTab === 'restaurant-assistant'
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${activeTab === 'restaurant-assistant'
                 ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white shadow-lg shadow-purple-500/25'
                 : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-white/5'
-            }`}
+              }`}
           >
             <Sparkles className="w-4 h-4" />
             <span>2. Restaurant Menu LLM Bot</span>
@@ -388,11 +386,10 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
               soundEffects.playClick();
               setActiveTab('banking-ledger');
             }}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-              activeTab === 'banking-ledger'
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${activeTab === 'banking-ledger'
                 ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/25'
                 : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-white/5'
-            }`}
+              }`}
           >
             <ShieldCheck className="w-4 h-4" />
             <span>3. Banking Ledger & Idempotency</span>
@@ -403,11 +400,10 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
               soundEffects.playClick();
               setActiveTab('cli-terminal');
             }}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-              activeTab === 'cli-terminal'
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${activeTab === 'cli-terminal'
                 ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 font-bold shadow-lg shadow-amber-500/25'
                 : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-white/5'
-            }`}
+              }`}
           >
             <TerminalIcon className="w-4 h-4" />
             <span>4. Developer Terminal (CLI)</span>
@@ -416,7 +412,7 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
 
         {/* Playground Container Card */}
         <div className="glass-panel rounded-2xl border border-white/10 shadow-2xl overflow-hidden bg-slate-950/80 backdrop-blur-xl">
-          
+
           {/* TAB 1: AI RESUME & JOB MATCH ANALYZER */}
           {activeTab === 'resume-matcher' && (
             <div className="p-6 sm:p-8 space-y-6">
@@ -441,11 +437,10 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
                         setSelectedPresetIndex(idx);
                         setJobDescription(role.description);
                       }}
-                      className={`text-xs px-2.5 py-1 rounded-lg border font-mono transition-colors ${
-                        selectedPresetIndex === idx
+                      className={`text-xs px-2.5 py-1 rounded-lg border font-mono transition-colors ${selectedPresetIndex === idx
                           ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50'
                           : 'bg-slate-900 text-slate-400 border-white/5 hover:text-slate-200'
-                      }`}
+                        }`}
                     >
                       Role {idx + 1}
                     </button>
@@ -586,11 +581,10 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
                     className={`flex ${m.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
-                      className={`max-w-[80%] rounded-2xl p-3.5 text-xs sm:text-sm leading-relaxed ${
-                        m.sender === 'user'
+                      className={`max-w-[80%] rounded-2xl p-3.5 text-xs sm:text-sm leading-relaxed ${m.sender === 'user'
                           ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-tr-none'
                           : 'bg-slate-800/90 text-slate-200 border border-white/10 rounded-tl-none'
-                      }`}
+                        }`}
                     >
                       <div className="whitespace-pre-line">{m.text}</div>
                       <div className={`text-[9px] mt-1 text-right ${m.sender === 'user' ? 'text-purple-200' : 'text-slate-400'}`}>
@@ -748,11 +742,10 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
 
               {/* Status Banner */}
               {transferStatusMessage && (
-                <div className={`p-3 rounded-lg text-xs leading-relaxed border ${
-                  transferStatusMessage.includes('PREVENTED')
+                <div className={`p-3 rounded-lg text-xs leading-relaxed border ${transferStatusMessage.includes('PREVENTED')
                     ? 'bg-amber-950/40 text-amber-300 border-amber-500/40'
                     : 'bg-emerald-950/40 text-emerald-300 border-emerald-500/40'
-                }`}>
+                  }`}>
                   {transferStatusMessage}
                 </div>
               )}
@@ -785,9 +778,8 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
                         <tr key={tx.id} className="hover:bg-white/5 transition-colors">
                           <td className="p-2.5 text-slate-400">{tx.id}</td>
                           <td className="p-2.5">
-                            <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
-                              tx.type === 'DEBIT' ? 'bg-red-950 text-red-400 border border-red-800/40' : 'bg-emerald-950 text-emerald-400 border border-emerald-800/40'
-                            }`}>
+                            <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${tx.type === 'DEBIT' ? 'bg-red-950 text-red-400 border border-red-800/40' : 'bg-emerald-950 text-emerald-400 border border-emerald-800/40'
+                              }`}>
                               {tx.type}
                             </span>
                           </td>
@@ -869,3 +861,4 @@ export const InteractivePlayground: React.FC<PlaygroundProps> = ({ initialTab = 
     </section>
   );
 };
+

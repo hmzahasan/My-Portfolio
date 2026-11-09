@@ -51,3 +51,4 @@ export interface EducationItem {
   coursework: string[];
   achievements: string[];
 }
+
